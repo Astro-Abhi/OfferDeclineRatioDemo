@@ -1,16 +1,17 @@
 <?php
  header("Access-Control-Allow-Origin: *");
-
 //error_reporting(E_ALL);
 require 'Medoo.php';
+
 use Medoo\Medoo;
 
 $database = new Medoo([
+  // required
   'database_type' => 'mysql',
-  'database_name' => '',
+  'database_name' => 'parammgq_odr',
   'server' => 'localhost',
-  'username' => '',
-    'password' => ''
+  'username' => 'parammgq_astro',
+    'password' => 'Nnt!uMTB2t2VQah'
 ]);
 
 $response = null;
@@ -124,12 +125,12 @@ if (isset($_GET['tag'])) {
 
         }
        
-        $per30 = ($for30 / $datas[0]['vacancy']) * 100;
-        $per2130 = ($for2130 / $datas[0]['vacancy']) * 100;
-        $per1521 = ($for1521 / $datas[0]['vacancy']) * 100;
-        $per715 = ($for715 / $datas[0]['vacancy']) * 100;
-        $per27 = ($for27 / $datas[0]['vacancy']) * 100;
-        $per1 = ($for1 / $datas[0]['vacancy']) * 100;
+        $per30 = round(($for30 / $datas[0]['vacancy']) * 100,2);
+        $per2130 = round(($for2130 / $datas[0]['vacancy']) * 100,2);
+        $per1521 = round(($for1521 / $datas[0]['vacancy']) * 100,2);
+        $per715 = round(($for715 / $datas[0]['vacancy']) * 100,2);
+        $per27 = round(($for27 / $datas[0]['vacancy']) * 100,2);
+        $per1 = round(($for1 / $datas[0]['vacancy']) * 100,2);
 
         echo json_encode(array($per30,$per2130,$per1521,$per715,$per27,$per1));
 
@@ -154,11 +155,11 @@ if (isset($_GET['tag'])) {
             }
         }
 
-        $pbo = ($bo / $vac[0]['vacancy']) * 100;
-        $plc = ($lc / $vac[0]['vacancy']) * 100;
-        $po = ($o / $vac[0]['vacancy']) * 100;
+        $pbo = round(($bo / $vac[0]['vacancy']) * 100,2);
+        $plc = round(($lc / $vac[0]['vacancy']) * 100,2);
+        $po = round(($o / $vac[0]['vacancy']) * 100,2);
         $rm = ($vac[0]['vacancy'] - ($bo+$lc+$o));
-        $prm = ($rm / $vac[0]['vacancy']) * 100;
+        $prm = round(($rm / $vac[0]['vacancy']) * 100,2);
 
         echo json_encode(array($pbo,$plc,$po,$prm));
 
