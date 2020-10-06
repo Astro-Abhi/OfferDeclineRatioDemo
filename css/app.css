@@ -1,0 +1,56 @@
+body {
+    background-color: #F6F7FB;
+    font-family: 'Work Sans', sans-serif;
+}
+
+nav {
+    box-shadow: 0 0 0 0;
+    background-color: #fff;
+   
+}
+
+#dash {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    color: #4886FF;
+    font-size: large;
+}
+
+.border {
+    border-radius: 20px;
+}
+
+.border h3 {
+    font-weight: 400;
+    font-size: 50px;
+}
+
+main {
+    padding: 25px;
+}
+
+.anacards {
+    border-radius: 10px;
+    height: 150px;
+}
+
+
+
+.circliful {
+    position: relative;
+    }
+    .circle-text, .circle-info, .circle-text-half, .circle-info-half {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    display: inline-block;
+    }
+    .circle-info, .circle-info-half {
+    color: #999;
+    }
+    .circliful .fa {
+    margin: -10px 3px 0 3px;
+    position: relative;
+    bottom: 4px;
+    }
