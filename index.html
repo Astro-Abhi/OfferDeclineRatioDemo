@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offer Decline Ratio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="js/apexcharts.css" />
+    <script src="https://kit.fontawesome.com/9492d6c7f8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo center black-text">Dashboard</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="index.html" class="black-text"><i class="fas fa-database"></i> Data Updation</a></li>
+          </ul>
+        </div>
+      </nav>
+</header>
+<main>
+
+
+      <div class="row">
+      
+          <div class="col l12">
+            <h5>Analytics</h5>
+
+            <div class="row">
+                <div class="col l3 s12 ">
+                    <div class="card-panel border" style="height: 150px;">
+                        <div style="margin-top: -20px;">
+                            <h3 class="blue-text" id="jobcount"></h3>
+                            <p>Offer Initiated</p></div>
+                    </div>
+                </div>
+                <div class="col l3 s12 ">
+                    <div class="card-panel border" style="height: 150px;">
+                        <div style="margin-top: -20px;">
+                        <h3 class="blue-text" id="acceptedcount"></h3>
+                        <p>Offer Accepted</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="col l3 s12 ">
+                    <div class="card-panel border" style="height: 150px;">
+                        <div style="margin-top: -20px;">
+                        <h3 class="blue-text" id="declinecount"></h3>
+                        <p>Offer Rejected</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="col l3 s12 ">
+                    <div class="card-panel border" style="height: 150px;">
+                        <div style="margin-top: -20px;">
+                        <h3 class="blue-text" id="pending"></h3>
+                        <p>Offer Pending</p>
+                    </div>
+                    </div>
+                </div>
+                
+            </div>
+           
+            <div class="row">
+              <div class="col l4 s12">
+                <div class="card-panel border">
+                    <h5>Reason of Rejection</h5>
+                <div id="rej"></div>
+                </div>
+              </div>
+
+              <div class="col l8 s12">
+                <div class="card-panel border">
+                    <h5>Offer Decline Ratio</h5>
+                <div id="chart"></div>
+                </div>
+    
+              </div>
+                   
+            
+                
+            </div>
+          </div>
+      </div>
+    </main>
+    <script src="js/apexcharts.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://www.jqueryscript.net/demo/Animated-Circle-Statistics-Plugin-With-jQuery-Canvas-Circliful/js/jquery.circliful.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/JavaScript" src="js/index.js"></script>
+</body>
+</html>
